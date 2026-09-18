@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b203463fb14ed1479899c1ee6a368e9, type: 3}
+  m_Name: Skill Data - Catch This!
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  skillName: Catch This!
+  description: Throw an arrow to damage enemies. Arrow will apply status effects.
+    You can have only one active arrow at a time.
+  icon: {fileID: -1132613532, guid: a34ddd45405a7f8439f3ad2d5ff422c0, type: 3}
+  cost: 1
+  unlockedByDefault: 0
+  skillType: 3
+  upgradeData:
+    upgradeType: 11
+    cooldown: 4
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      chillDuration: 3
+      chillSlowMultiplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4

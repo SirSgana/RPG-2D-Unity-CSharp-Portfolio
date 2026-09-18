@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b203463fb14ed1479899c1ee6a368e9, type: 3}
+  m_Name: Skill Data - Echoes Of The Past
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  skillName: Echoes Of The Past
+  description: Each enemy trapped in the time warp is struck by multiple time echoes.
+  icon: {fileID: 1312204346, guid: a34ddd45405a7f8439f3ad2d5ff422c0, type: 3}
+  cost: 4
+  unlockedByDefault: 0
+  skillType: 4
+  upgradeData:
+    upgradeType: 23
+    cooldown: 120
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      chillDuration: 3
+      chillSlowMultiplier: 0.2
+      burnDuration: 3
+      burnDamageScale: 1
+      shockDuration: 3
+      shockDamageScale: 1
+      shockCharge: 0.4
