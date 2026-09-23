@@ -3,13 +3,14 @@ using UnityEngine;
 using System.Text;
 using System.Collections;
 
-public class UI_SkillTooltip : UI_Tooltip
+public class UI_SkillTooltip : UI_ToolTip
 {
     private UI ui;
     private UI_SkillTree skillTree;
 
     [SerializeField] private TextMeshProUGUI skillName;
     [SerializeField] private TextMeshProUGUI skillDescription;
+    [SerializeField] private TextMeshProUGUI skillCooldown;
     [SerializeField] private TextMeshProUGUI skillRequirements;
     [Space]
     [SerializeField] private string metConditionHex;
@@ -40,6 +41,7 @@ public class UI_SkillTooltip : UI_Tooltip
 
         skillName.text = node.skillData.skillName;
         skillDescription.text = node.skillData.description;
+        skillCooldown.text = "Cooldown: " + node.skillData.upgradeData.cooldown + " s.";
 
         string skillLockedText = GetColoredText(importantInfoHex, lockedSkillText);
         string requirements = node.isLocked ? skillLockedText : GetRequirements(node.skillData.cost, node.neededNodes, node.conflictNodes);
@@ -73,7 +75,7 @@ public class UI_SkillTooltip : UI_Tooltip
         sb.AppendLine("Requirements:");
 
         string costColor = skillTree.EnoughSkillPoints(skillCost) ? metConditionHex : notMetConditionHex;
-        string costText = $"- {skillCost} skill point(s)";
+        string costText = $"{skillCost} skill point(s)";
         string finalCostText = GetColoredText(costColor, costText);
 
         sb.AppendLine(finalCostText);

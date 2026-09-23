@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI_Tooltip : MonoBehaviour
+public class UI_ToolTip : MonoBehaviour
 {
     [SerializeField] private Vector2 offset = new Vector2(300, 20);
 
